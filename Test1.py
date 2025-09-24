@@ -1,25 +1,31 @@
 import sqlite3
 import pandas as pd
 
-def top_customers_by_spending(db_path, n):
-    query = """
-        SELECT CustomerId AS ID,
-               SUM(Total) AS Value
-        FROM Invoice
-        GROUP BY CustomerId
-        ORDER BY Value DESC
-        LIMIT ?;
-    """
-    with sqlite3.connect(db_path) as conn:
-        df = pd.read_sql_query(query, conn, params=(n,))
-    return df
-
-
-db_path = 'databases/Chinook_Sqlite.sqlite'
-n = int(input("Nhập số khách hàng top n: "))
-
+N =  int(input("Nhập số khách hàng thuộc top (n):"))
+sqliteConnection = None
 try:
-    result = top_customers_by_spending(db_path, n)
-    print(result)
-except sqlite3.Error as e:
-    print("Error occurred -", e)
+    sqliteConnection = sqlite3.connect('databases/Chinook_Sqlite.sqlite')
+    print('DB Init')
+
+    query = f"""
+        SELECT
+            i.CustomerId AS ID,
+            SUM(il.UnitPrice * il.Quantity) AS Value
+        FROM Invoice AS i
+        JOIN InvoiceLine AS il
+            ON i.InvoiceId = il.InvoiceId
+        GROUP BY i.CustomerId
+        ORDER BY Value DESC
+        LIMIT {N};
+    """
+
+    df_top_customers = pd.read_sql_query(query, sqliteConnection)
+    print(df_top_customers)
+
+except sqlite3.Error as error:
+    print("Error occurred -", error)
+
+finally:
+    if sqliteConnection:
+        sqliteConnection.close()
+        print("SQLite Connection closed")
