@@ -14,12 +14,11 @@ def top_customers_by_spending(db_path, n):
         df = pd.read_sql_query(query, conn, params=(n,))
     return df
 
-
-db_path = 'databases/Chinook_Sqlite.sqlite'
-n = int(input("Nhập số khách hàng top n: "))
+db_path = '../databases/Chinook_Sqlite.sqlite'
+n = int(input("Nhập số khách hàng thuộc top (n): "))
 
 try:
     result = top_customers_by_spending(db_path, n)
     print(result)
 except sqlite3.Error as e:
-    print("Error occurred -", e)
+    print("Error occurred", e)
