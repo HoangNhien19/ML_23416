@@ -25,6 +25,7 @@ class MainWindowEx(Ui_MainWindow):
         self.pushButtonInsert.clicked.connect(self.processInsert)
         self.pushButtonUpdate.clicked.connect(self.processUpdate)
         self.pushButtonRemove.clicked.connect(self.processRemove)
+        self.pushButtonNew.clicked.connect(self.clearData)
 
     def show(self):
         self.MainWindow.show()
@@ -130,18 +131,19 @@ class MainWindowEx(Ui_MainWindow):
         pixmap = QPixmap(self.default_avatar)
         self.labelAvatar.setPixmap(pixmap)
 
+
     def processInsert(self):
         try:
             cursor = self.conn.cursor()
-            # query all students
             sql = "insert into student(Code,Name,Age,Avatar,Intro) values(%s,%s,%s,%s,%s)"
 
             self.code = self.lineEditCode.text()
             self.name = self.lineEditName.text()
             self.age = int(self.lineEditAge.text())
             if not hasattr(self, 'avatar'):
-                avatar = None
-            intro = self.lineEditIntro.text()
+                self.avatar = None
+            self.intro = self.lineEditIntro.text()
+
             val = (self.code, self.name, self.age, self.avatar, self.intro)
 
             cursor.execute(sql, val)
@@ -158,7 +160,6 @@ class MainWindowEx(Ui_MainWindow):
 
     def processUpdate(self):
         cursor = self.conn.cursor()
-        # query all students
         sql = "update student set Code=%s,Name=%s,Age=%s,Avatar=%s,Intro=%s" \
               " where Id=%s"
         self.id = int(self.lineEditId.text())
@@ -178,6 +179,7 @@ class MainWindowEx(Ui_MainWindow):
         print(cursor.rowcount, " record updated")
         cursor.close()
         self.selectAllStudent()
+
 
     def processRemove(self):
         dlg = QMessageBox(self.MainWindow)

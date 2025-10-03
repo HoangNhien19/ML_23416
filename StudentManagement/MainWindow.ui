@@ -74,6 +74,16 @@
        <string>Age</string>
       </property>
      </column>
+     <column>
+      <property name="text">
+       <string>Avata</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Intro</string>
+      </property>
+     </column>
     </widget>
    </widget>
    <widget class="QGroupBox" name="groupBox_2">
@@ -156,7 +166,7 @@
       <string notr="true">background-color: rgb(255, 255, 180);</string>
      </property>
     </widget>
-    <widget class="QLineEdit" name="lineEdit_5">
+    <widget class="QLineEdit" name="lineEditIntro">
      <property name="geometry">
       <rect>
        <x>47</x>
@@ -253,7 +263,7 @@
       <string>Remove Avatar</string>
      </property>
     </widget>
-    <widget class="QLabel" name="label_7">
+    <widget class="QLabel" name="labelAvatar">
      <property name="geometry">
       <rect>
        <x>309</x>
@@ -273,7 +283,7 @@
      </property>
     </widget>
    </widget>
-   <widget class="QGroupBox" name="groupBox_4">
+   <widget class="QGroupBox" name="groupBox_3">
     <property name="geometry">
      <rect>
       <x>17</x>
