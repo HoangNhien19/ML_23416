@@ -15,7 +15,7 @@ conn = mysql.connector.connect(
                 user=username,
                 password=password)
 
-############# 3.1
+# ############ 3.1
 # cursor = conn.cursor()
 #
 # sql="insert into student (code,name,age) values (%s,%s,%s)"
@@ -29,7 +29,7 @@ conn = mysql.connector.connect(
 # print(cursor.rowcount," record inserted")
 # cursor.close()
 
-############ 3.2
+# ########### 3.2
 # cursor = conn.cursor()
 #
 # sql="insert into student (code,name,age) values (%s,%s,%s)"
@@ -47,7 +47,7 @@ conn = mysql.connector.connect(
 # print(cursor.rowcount," record inserted")
 # cursor.close()
 
-########## 4.1
+# ######### 4.1
 # cursor = conn.cursor()
 # sql="update student set name='Hoàng Lão Tà' where Code='sv09'"
 # cursor.execute(sql)
@@ -65,21 +65,7 @@ conn = mysql.connector.connect(
 # conn.commit()
 # print(cursor.rowcount," record(s) affected")
 
-############# 5.1
-# conn = mysql.connector.connect(
-#                 host=server,
-#                 port=port,
-#                 database=database,
-#                 user=username,
-#                 password=password)
-# cursor = conn.cursor()
-# sql="DELETE from student where ID=14"
-# cursor.execute(sql)
-#
-# conn.commit()
-# print(cursor.rowcount," record(s) affected")
-
-############ 5.2
+############ 5.1
 conn = mysql.connector.connect(
                 host=server,
                 port=port,
@@ -87,10 +73,24 @@ conn = mysql.connector.connect(
                 user=username,
                 password=password)
 cursor = conn.cursor()
-sql = "DELETE from student where ID=%s"
-val = (13,)
-
-cursor.execute(sql, val)
+sql="DELETE from student where ID=10"
+cursor.execute(sql)
 
 conn.commit()
 print(cursor.rowcount," record(s) affected")
+
+# ############ 5.2
+# conn = mysql.connector.connect(
+#                 host=server,
+#                 port=port,
+#                 database=database,
+#                 user=username,
+#                 password=password)
+# cursor = conn.cursor()
+# sql = "DELETE from student where ID=%s"
+# val = (13,)
+#
+# cursor.execute(sql, val)
+#
+# conn.commit()
+# print(cursor.rowcount," record(s) affected")
