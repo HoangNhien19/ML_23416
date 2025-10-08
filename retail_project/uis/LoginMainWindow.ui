@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>518</width>
+    <height>263</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QGroupBox" name="groupBox">
+    <property name="geometry">
+     <rect>
+      <x>193</x>
+      <y>18</y>
+      <width>257</width>
+      <height>218</height>
+     </rect>
+    </property>
+    <property name="title">
+     <string>Login System:</string>
+    </property>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>28</x>
+       <y>18</y>
+       <width>35</width>
+       <height>10</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Email:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditEmail">
+     <property name="geometry">
+      <rect>
+       <x>25</x>
+       <y>36</y>
+       <width>221</width>
+       <height>20</height>
+      </rect>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_2">
+     <property name="geometry">
+      <rect>
+       <x>27</x>
+       <y>66</y>
+       <width>70</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Password:</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="lineEditPassword">
+     <property name="geometry">
+      <rect>
+       <x>27</x>
+       <y>84</y>
+       <width>220</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="echoMode">
+      <enum>QLineEdit::Password</enum>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="checkBoxSave">
+     <property name="geometry">
+      <rect>
+       <x>31</x>
+       <y>118</y>
+       <width>156</width>
+       <height>32</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Save login information</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonLogin">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>153</y>
+       <width>65</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Login</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../images/ic_login_button.png</normaloff>../images/ic_login_button.png</iconset>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButtonExit">
+     <property name="geometry">
+      <rect>
+       <x>134</x>
+       <y>153</y>
+       <width>65</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Exit</string>
+     </property>
+     <property name="icon">
+      <iconset>
+       <normaloff>../images/ic_exit_button.png</normaloff>../images/ic_exit_button.png</iconset>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_6">
+    <property name="geometry">
+     <rect>
+      <x>43</x>
+      <y>57</y>
+      <width>104</width>
+      <height>108</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+    <property name="pixmap">
+     <pixmap>../images/ic_admin1.png</pixmap>
+    </property>
+    <property name="scaledContents">
+     <bool>true</bool>
+    </property>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>518</width>
+     <height>18</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>pushButtonExit</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>359</x>
+     <y>198</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>258</x>
+     <y>131</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
