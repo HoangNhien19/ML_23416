@@ -1,5 +1,6 @@
 from flask import Flask
 from flaskext.mysql import MySQL
+from markupsafe import Markup
 import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
@@ -87,27 +88,6 @@ def elbowMethod(df, colunmsForElbow):
 columns=['Age', 'Spending Score']
 elbowMethod(df2, columns)
 
-def elbowMethod(df, columnsForElbow):
-    X = df.loc[:, columnsForElbow].values
-    inertia = []
-    for n in range(1, 11):
-        model = KMeans(n_clusters=n,
-                       init='k-means++',
-                       max_iter=500,
-                       random_state=42)
-        model.fit(X)
-        inertia.append(model.inertia_)
-
-    plt.figure(1, figsize=(15,6))
-    plt.plot(np.arange(1, 11), inertia, 'o')
-    plt.plot(np.arange(1, 11), inertia, '-.', alpha=0.5)
-    plt.xlabel('Number of Clusters')
-    plt.ylabel('Cluster sum of squared distances')
-    plt.show()
-
-columns = ['Age', 'Spending Score']
-elbowMethod(df2, columns)
-
 def runKMeans(X, cluster):
     model = KMeans(n_clusters=cluster,
                    init='k-means++',
@@ -155,3 +135,56 @@ visualizeKMeans(X,
                 "Age",
                 "Spending Score",
                 colors)
+
+columns =['Annual Income', 'Spending Score']
+elbowMethod(df2, columns)
+
+X = df2.loc[:, columns].values
+cluster=5
+
+y_kmeans,centroids,labels=runKMeans(X,cluster)
+
+print(y_kmeans)
+print(centroids)
+print(labels)
+df2["cluster"]=labels
+visualizeKMeans(X,
+                y_kmeans,
+                cluster,
+                "Clusters of Customers - Age X Spending Score",
+                "Annual Income",
+                "Spending Score",
+                colors)
+
+columns=['Age','Annual Income','Spending Score']
+elbowMethod(df2,columns)
+X = df2.loc[:, columns].values
+cluster=6
+
+y_kmeans,centroids,labels=runKMeans(X,cluster)
+print(y_kmeans)
+print(centroids)
+print(labels)
+df2["cluster"]=labels
+print(df2)
+
+
+def visualize3DKmeans(df, columns, hover_data, cluster):
+    fig = px.scatter_3d(
+        df,
+        x=columns[0],
+        y=columns[1],
+        z=columns[2],
+        color='cluster',
+        hover_data=hover_data,
+        category_orders={"cluster": range(0, cluster)}
+    )
+
+    fig.update_layout(margin=dict(l=0, r=0, b=0, t=0))
+    fig.show()
+
+hover_data = df2.columns
+visualize3DKmeans(df2,columns,hover_data,cluster)
+
+
+
