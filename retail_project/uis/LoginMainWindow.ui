@@ -48,6 +48,9 @@
        <height>20</height>
       </rect>
      </property>
+     <property name="text">
+      <string>putin@gmail.com</string>
+     </property>
     </widget>
     <widget class="QLabel" name="label_2">
      <property name="geometry">

@@ -70,6 +70,7 @@ class Ui_MainWindow(object):
         MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
         self.groupBox.setTitle(_translate("MainWindow", "Login System:"))
         self.label.setText(_translate("MainWindow", "Email:"))
+        self.lineEditEmail.setText(_translate("MainWindow", "putin@gmail.com"))
         self.label_2.setText(_translate("MainWindow", "Password:"))
         self.checkBoxSave.setText(_translate("MainWindow", "Save login information"))
         self.pushButtonLogin.setText(_translate("MainWindow", "Login"))
