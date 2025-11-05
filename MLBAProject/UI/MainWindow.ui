@@ -1,0 +1,764 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1279</width>
+    <height>852</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Nhiên</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="layoutCentral">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>1</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Statistics:</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridTab1" columnstretch="0,1">
+        <item row="0" column="0">
+         <widget class="QGroupBox" name="groupBox">
+          <property name="minimumSize">
+           <size>
+            <width>400</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Functions:</string>
+          </property>
+          <layout class="QVBoxLayout" name="verticalLayoutFunctions">
+           <item>
+            <widget class="QPushButton" name="pushButtonPurchaseRatesByGender">
+             <property name="text">
+              <string>(1) Purchase rates by gender</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../Images/gender_mixed_users_icon.png</normaloff>../Images/gender_mixed_users_icon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="hboxAgeRange">
+             <item>
+              <widget class="QLabel" name="label_2">
+               <property name="maximumSize">
+                <size>
+                 <width>40</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>From:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditFromAge">
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>30</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLabel" name="label">
+               <property name="maximumSize">
+                <size>
+                 <width>30</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>To:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEditToAge">
+               <property name="maximumSize">
+                <size>
+                 <width>50</width>
+                 <height>16777215</height>
+                </size>
+               </property>
+               <property name="text">
+                <string>50</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QPushButton" name="pushButtonPurchaseRatesByAgeGroup">
+               <property name="text">
+                <string>(2) Purchase rates by age group</string>
+               </property>
+               <property name="icon">
+                <iconset>
+                 <normaloff>../Images/purchase.png</normaloff>../Images/purchase.png</iconset>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonPurchaseCountingByCategory">
+             <property name="text">
+              <string>(3) Purchase counting by category</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../Images/basket_buy_cart_sale_shop_icon.png</normaloff>../Images/basket_buy_cart_sale_shop_icon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonPurchaseValueByCategory">
+             <property name="text">
+              <string>(4) Purchase value by category</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../Images/catory.png</normaloff>../Images/catory.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonPurchaseByCategoryAndGender">
+             <property name="text">
+              <string>(5) Purchases by category and gender</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../Images/category_icon.png</normaloff>../Images/category_icon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonPaymentMethod">
+             <property name="text">
+              <string>(6) Payment method: Cash, Credit, Debit card</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../Images/6334497_budget_currency_dollar_finance_money_icon.png</normaloff>../Images/6334497_budget_currency_dollar_finance_money_icon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonPurchaseRatesByShoppingMall">
+             <property name="text">
+              <string>(7) Purchase rates by Shopping Mall</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../Images/shopping cart_icon.png</normaloff>../Images/shopping cart_icon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonProductSpendingByGender">
+             <property name="text">
+              <string>(8) Products spending by gender</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../Images/age_people_icon.png</normaloff>../Images/age_people_icon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonPurchaseFrequenceByAge">
+             <property name="text">
+              <string>(9) Purchase frequency by age</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../Images/frequency.png</normaloff>../Images/frequency.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonSalesFluctuationsByMonth">
+             <property name="text">
+              <string>(10) Statistics on sales fluctuations by month</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../Images/calendar_date_event_icon.png</normaloff>../Images/calendar_date_event_icon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButtonSalesFlucuationsByYearAndMonth">
+             <property name="text">
+              <string>(11) Statistics on sales fluctuations by year and month</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../Images/calendar_icon.png</normaloff>../Images/calendar_icon.png</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <layout class="QVBoxLayout" name="vboxRight">
+          <item>
+           <widget class="QGroupBox" name="groupBox_3">
+            <property name="title">
+             <string>List of Data:</string>
+            </property>
+            <layout class="QVBoxLayout" name="vboxTable">
+             <item>
+              <widget class="QTableWidget" name="tableWidgetStatistic">
+               <column>
+                <property name="text">
+                 <string>Gender</string>
+                </property>
+               </column>
+               <column>
+                <property name="text">
+                 <string>Number Sales</string>
+                </property>
+               </column>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+          <item>
+           <widget class="QGroupBox" name="groupBox_4">
+            <property name="title">
+             <string>Chart Visualization:</string>
+            </property>
+            <layout class="QVBoxLayout" name="verticalLayoutPlot"/>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tab_2">
+       <attribute name="title">
+        <string>Machine Learning</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="vboxTab2">
+        <item>
+         <widget class="QGroupBox" name="groupBox_2">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>600</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Choose Independent and Dependent variables:</string>
+          </property>
+          <layout class="QVBoxLayout" name="vboxVars">
+           <item>
+            <widget class="QRadioButton" name="radioButtonGenderAge">
+             <property name="text">
+              <string>Gender, Age =&gt; Price</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QRadioButton" name="radioButtonGenderAgePayment">
+             <property name="text">
+              <string>Gender, Age, Payment Method=&gt;Price</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_7">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>600</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Train Model:</string>
+          </property>
+          <layout class="QGridLayout" name="gridTrain">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_3">
+             <property name="text">
+              <string>Test Size:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEditTestSize">
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>20</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2">
+            <widget class="QLabel" name="label_4">
+             <property name="text">
+              <string>%</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_5">
+             <property name="text">
+              <string>Random State:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEditRandomState">
+             <property name="text">
+              <string>0</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3" rowspan="2">
+            <widget class="QPushButton" name="pushButtonTrainModel">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>Train Model</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../Images/brain_icon.png</normaloff>../Images/brain_icon.png</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_6">
+          <property name="maximumSize">
+           <size>
+            <width>600</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Evaluation</string>
+          </property>
+          <layout class="QGridLayout" name="gridEval">
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_9">
+             <property name="text">
+              <string>RMSE:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="lineEditRMSE">
+             <property name="maximumSize">
+              <size>
+               <width>500</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="frame">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEditMAE">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>500</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="focusPolicy">
+              <enum>Qt::StrongFocus</enum>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="lineEditR2SCore">
+             <property name="maximumSize">
+              <size>
+               <width>500</width>
+               <height>16777215</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_10">
+             <property name="text">
+              <string>R2_SCORE:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2" rowspan="4">
+            <widget class="QPushButton" name="pushButtonEvaluate">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>16777215</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="text">
+              <string>    Evaluate</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../Images/evaluationicon.png</normaloff>../Images/evaluationicon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_8">
+             <property name="text">
+              <string>MSE:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_7">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+               <horstretch>0</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="text">
+              <string>MAE:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEditMSE">
+             <property name="maximumSize">
+              <size>
+               <width>500</width>
+               <height>16777215</height>
+              </size>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_8">
+          <property name="maximumSize">
+           <size>
+            <width>600</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Save Trained Model</string>
+          </property>
+          <layout class="QGridLayout" name="gridSave">
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_11">
+             <property name="text">
+              <string>Path:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEditPath"/>
+           </item>
+           <item row="0" column="2">
+            <widget class="QPushButton" name="pushButtonSavePath">
+             <property name="text">
+              <string>...</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3">
+            <widget class="QPushButton" name="pushButtonSaveModel">
+             <property name="text">
+              <string>Save model</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../Images/download_load_icon.png</normaloff>../Images/download_load_icon.png</iconset>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_9">
+          <property name="maximumSize">
+           <size>
+            <width>600</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Load trained Model:</string>
+          </property>
+          <layout class="QGridLayout" name="gridLoad">
+           <item row="0" column="0">
+            <widget class="QPushButton" name="pushButtonLoadModel">
+             <property name="text">
+              <string>Load Model</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../Images/load_upload_icon.png</normaloff>../Images/load_upload_icon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEditLocationLoadTrainedModel"/>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <widget class="QGroupBox" name="groupBox_10">
+          <property name="maximumSize">
+           <size>
+            <width>600</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="title">
+           <string>Prediction:</string>
+          </property>
+          <layout class="QGridLayout" name="gridPredict">
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="lineEditGender"/>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="lineEditPaymentMethod"/>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="lineEditAge"/>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_14">
+             <property name="text">
+              <string>Payment Method:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_13">
+             <property name="text">
+              <string>Age:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QPushButton" name="pushButtonPredict">
+             <property name="text">
+              <string>Predict</string>
+             </property>
+             <property name="icon">
+              <iconset>
+               <normaloff>../Images/directory_icon.png</normaloff>../Images/directory_icon.png</iconset>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_15">
+             <property name="text">
+              <string>Predicted Price:</string>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QLineEdit" name="lineEditPredictedPrice"/>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_12">
+             <property name="text">
+              <string>Gender:</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </item>
+        <item>
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+       </layout>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1279</width>
+     <height>18</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuSystem">
+    <property name="title">
+     <string>System</string>
+    </property>
+    <addaction name="actionConnection"/>
+    <addaction name="separator"/>
+    <addaction name="actionSave_trained_Machine_Learning_Model"/>
+    <addaction name="separator"/>
+    <addaction name="actionLoad_trained_Machine_Learning_Model"/>
+    <addaction name="separator"/>
+    <addaction name="actionExit"/>
+   </widget>
+   <widget class="QMenu" name="menuHelp">
+    <property name="title">
+     <string>Help</string>
+    </property>
+    <addaction name="actionInstructions"/>
+    <addaction name="separator"/>
+    <addaction name="actionAbout"/>
+   </widget>
+   <addaction name="menuSystem"/>
+   <addaction name="menuHelp"/>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+  <action name="actionConnection">
+   <property name="text">
+    <string>Connect Database</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+D</string>
+   </property>
+  </action>
+  <action name="actionSave_trained_Machine_Learning_Model">
+   <property name="text">
+    <string>Save trained ML Model</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+S</string>
+   </property>
+  </action>
+  <action name="actionLoad_trained_Machine_Learning_Model">
+   <property name="text">
+    <string>Load trained ML Model</string>
+   </property>
+   <property name="shortcut">
+    <string>Ctrl+O</string>
+   </property>
+  </action>
+  <action name="actionExit">
+   <property name="text">
+    <string>Exit</string>
+   </property>
+   <property name="shortcut">
+    <string>Esc</string>
+   </property>
+  </action>
+  <action name="actionInstructions">
+   <property name="text">
+    <string>Instructions</string>
+   </property>
+  </action>
+  <action name="actionAbout">
+   <property name="text">
+    <string>About</string>
+   </property>
+  </action>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>actionExit</sender>
+   <signal>triggered()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>-1</x>
+     <y>-1</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>20</x>
+     <y>20</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
